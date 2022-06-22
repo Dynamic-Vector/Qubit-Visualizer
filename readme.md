@@ -1,7 +1,6 @@
 <div align="center"> 
-  <img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/quantum-computing-e1613999097298-modified.png" alt="WebBadge" border="0" height='200'>
-  <h1 align ="center">Qubit Visualizer </h1>
-  <h3 align="center">by Quantum Labs</h3>
+  <h1>Quantum Labs </h1>
+
 
 
    
