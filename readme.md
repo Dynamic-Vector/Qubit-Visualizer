@@ -1,5 +1,5 @@
 <div align="center"> 
-  <img src="https://github.com/Its-Nishant-01/vibing/blob/master/app/src/main/res/drawable/lomgo.png" alt="WebBadge" border="0" height='150'>
+  <img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/quantum-computing-e1613999097298.jpg" alt="WebBadge" border="0" height='150'>
   <h1 align ="center">Qubit Visualizer </h1>
   <h3 align="center">by Quantum Labs</h3>
 
