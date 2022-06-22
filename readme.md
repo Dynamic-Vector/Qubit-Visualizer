@@ -1,5 +1,5 @@
 <div align="center"> 
-  <img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/quantum-computing-e1613999097298.jpg" alt="WebBadge" border="0" height='150'>
+  <img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/quantum-computing-e1613999097298-modified.png" alt="WebBadge" border="0" height='200'>
   <h1 align ="center">Qubit Visualizer </h1>
   <h3 align="center">by Quantum Labs</h3>
 
@@ -16,32 +16,35 @@
 It is a Desktop Application which can be used to visualize the effects of **Quantum Gates** on **Qubit** by the help of **Bloch Sphere**.
 
 
-<a href="#"><img src="https://github.com/Its-Nishant-01/vibing/blob/master/app/src/main/res/screens/simpsons-bart-simpson.gif" alt="vibing" width="300px" height="200"></a>
+<a href="#"><img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/gates.gif" alt="vibing" width="350" height="200"></a>
 
 ## Basic Concepts
-**Superposition**-Superposition is the ability of a quantum system to be in multiple states at the same time until it is measured.<br>
-**Qubit**-A qubit is a two-level quantum system where the two basic qubit states are usually written as ∣0⟩ and ∣1⟩.It is in a linear combination of both state by the phenomenon of **Superpositon**.Unlike the normal computer bit which is either 0 or 1.
+**Superposition**-Superposition is the ability of a quantum system to be in multiple states at the same time until it is measured.<br><br>
+  <a href="#"><img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/superposition.gif" alt="vibing" width="300px" height="200"></a><br><br>
+**Qubit**-A qubit is a two-level quantum system where the two basic qubit states are usually written as ∣0⟩ and ∣1⟩.It is in a linear combination of both state by the phenomenon of **Superpositon**.Unlike the normal computer bit which is either 0 or 1.<br><br>
+<a href="#"><img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/VigilantPoorAuklet-max-1mb.gif" alt="vibing" width="350" height="200"></a><br><br>
+**Bloch Sphere**-In quantum mechanics and computing, the Bloch sphere is a geometrical representation of the pure state space of a two-level quantum mechanical system (qubit), named after the physicist Felix Bloch.<br><br>
+<a href="#"><img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/bloch%20sphere.gif" alt="vibing" width="350" height="200"></a><br>
+
 
 
 
 
 ## Application
 <div>
-<img src="https://github.com/Its-Nishant-01/vibing/blob/master/app/src/main/res/screens/Screen%201.jpg" alt="Screen1" align="left" border="0" height='500'>
-<img src="https://github.com/Its-Nishant-01/vibing/blob/master/app/src/main/res/screens/Screen%203.jpg" alt="Screen2" align="center" border="0" height='500'>
+<img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/QuantumUI%20(2).png" align="left" border="0" height='500'>
+<img src="https://github.com/Dynamic-Vector/Qubit-Visualizer/blob/master/res/Z_one.gif" alt="Screen2" align="center" border="0" height='500'>
 
 
 </div>
 
 
-## Functionality & Concept used:
-The App has a very simple and interactive interface that helps people to experience different ambient sounds and allows them to customize as per their preferance. Following are a few android concepts used to achieve the functionalities in the app:<br>
+## Techstack used:
 
-**1.Scroll View:** A view group that allows the view hierarchy placed within it to be scrolled.
+**Qiskit Library**: Qiskit is an open-source SDK for working with quantum computers at the level of pulses, circuits, and application modules.
 
-**2.Media Player:** The Android multimedia framework includes support for playing variety of common media types, so that you can easily integrate audio, video and images into your applications.
+**Tkinter**: Tkinter is the standard GUI library for Python. Python when combined with Tkinter provides a fast and easy way to create GUI applications.
 
-**3.Relative Layout:** It is a the layout in which the  position of each view can be specified as relative to sibling elements.
 
 
 ## Support
