@@ -1,8 +1,8 @@
 from tkinter import *
 import tkinter as tk
+import numpy as np
 from qiskit import QuantumCircuit
 from qiskit.visualization import visualize_transition
-import numpy as np
 from tkinter import LEFT,END,DISABLED,NORMAL
 import warnings
 
@@ -66,7 +66,60 @@ def clear(circuit):
        for gate in gates:
            gate.config(state=NORMAL)
 
+def user_input(circuit,key):
+    """Take the user input for rotation for paramaterized 
+     Rotation gates Rx,Ry,Rz
+      """
 
+    #Initialize adn define the properties of window
+    get=tk.Tk()
+    get.title("Enter theta")
+    get.geometry("320x80")
+    get.resizable(0,0)
+
+
+    val1=tk.Button(get,height=2,width=10,text="PI/4",command=lambda:change_theta(0.25,get,circuit,key))
+    val1.grid(row=0,column=0)
+
+    val2=tk.Button(get,height=2,width=10,text="PI/2",command=lambda:change_theta(0.50,get,circuit,key))
+    val2.grid(row=0,column=1)
+
+    val3=tk.Button(get,height=2,width=10,text="PI",command=lambda:change_theta(1.0,get,circuit,key))
+    val3.grid(row=0,column=2)
+   
+    val4=tk.Button(get,height=2,width=10,text="2*PI",command=lambda:change_theta(2.0,get,circuit,key))
+    val4.grid(row=0,column=3,sticky='w')
+
+    val5=tk.Button(get,height=2,width=10,text="-PI/4",command=lambda:change_theta(-0.25,get,circuit,key))
+    val5.grid(row=1,column=0)
+    
+    val6=tk.Button(get,height=2,width=10,text="-PI/2",command=lambda:change_theta(-0.50,get,circuit,key))
+    val6.grid(row=1,column=1)
+
+    val7=tk.Button(get,height=2,width=10,text="-PI",command=lambda:change_theta(-1.0,get,circuit,key))
+    val7.grid(row=1,column=2)
+ 
+    val8=tk.Button(get,height=2,width=10,text="-2*PI",command=lambda:change_theta(-2.0,get,circuit,key))
+    val8.grid(row=1,column=3,sticky='w')
+ 
+
+    
+    get.mainloop()
+
+def change_theta(num,window,circuit,key):
+
+    global theta
+    theta = num* np.pi
+    if key=='x':
+        circuit.rx(theta,0)
+        thera=0 
+    elif key=='y':
+        circuit.ry(theta,0)
+        theta=0
+    else :
+        circuit.rz(theta,0)
+        theta=0
+    window.destroy()            
 
 #Attributes
 
@@ -193,6 +246,56 @@ h= Button(
 
 h.place(x = 695, y = 275
     , width = 60, height = 30) 
+
+rx= Button(
+    window,
+    text = "RX",
+    font = button_font,
+    bg = buttons,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge",
+    command =lambda:[display_gate('RX'),user_input(circuit, 'x')])
+
+rx.place(x = 485, y = 350
+    , width = 60, height = 30)
+
+
+
+
+ry= Button(
+    window,
+    text = "RY",
+    font = button_font,
+    bg = buttons,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge",
+    command =lambda:[display_gate('RY'),user_input(circuit, 'y')])
+
+ry.place(x = 590, y = 350,
+        width = 60, height = 30)
+
+
+
+
+
+
+rz= Button(
+    window,
+    text = "RZ",
+    font = button_font,
+    bg = buttons,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge",
+    command =lambda:[display_gate('RZ'),user_input(circuit, 'z')])
+
+
+rz.place(x = 695, y = 350,
+        width = 60, height = 30)
+
+
          
 t= Button(
     window,
@@ -204,7 +307,7 @@ t= Button(
     relief = "ridge",
     command =lambda:[display_gate('T'),circuit.t(0)])
 
-t.place(x = 485, y = 350
+t.place(x = 485, y = 425
     , width = 60, height = 30)  
 
 td= Button(
@@ -217,7 +320,7 @@ td= Button(
     relief = "ridge",
     command =lambda:[display_gate('TD'),circuit.tdg(0)])
 
-td.place(x = 590, y = 350,
+td.place(x = 590, y = 425,
      width = 60, height = 30)
 
 
@@ -231,7 +334,7 @@ clean = Button(
     relief = "ridge",
     command=lambda:clear(circuit))
 
-clean.place(x = 695, y = 350
+clean.place(x = 695, y = 425
     , width = 60, height = 30)
 
 
@@ -243,9 +346,9 @@ visualize = Button(
     bd = 0,
     highlightthickness = 0,
     relief = "ridge",
-    command =lambda:visualize_transition(circuit))
+    command =lambda:visualize_transition(circuit,trace=False,saveas=None,spg=2,fpg=100))
 
-visualize.place(x = 540, y = 420
+visualize.place(x = 540, y = 490
     , width = 160, height = 40)
 
 
